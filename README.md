@@ -20,6 +20,7 @@ writes each file out. On the way it does three things:
 - It turns `stm://SurfTheAges/` links into relative links.
 - It turns links to World Book articles (`stm://WB/...`), which only the app can show, into plain text.
 - It lowercases relative file names to match the archive, since the app's protocol ignored case.
+- It stops wide backgrounds tiling. The app showed the pages in a window about 1068 × 731, so a wide background never repeated across it. A scene behind a page is shown once, and a strip with a border down its left edge repeats only downwards, with the rest of the page in the strip's own colour. Small textures still tile.
 
 Three leftover `.tmp` entries point to files that never shipped and are
 missing. A few dozen links were already dead in the original content.
